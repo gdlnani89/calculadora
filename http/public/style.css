@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins|Roboto+Slab&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #ededed;
+}
+.container
+{
+  position: relative;
+  display: grid;
+}
+.container input
+{
+  grid-column: span 4;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.c
+{
+  background: white;
+}
+span
+{
+/*   padding: 10px; */
+/*   background: #ededed; */
+  cursor: pointer;
+  display: grid;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  place-items: center;
+  background: #d5d5d5;
+  margin: 2px auto;
+  transition: font-size .1s;
+  /* box-shadow: -3px -3px 7px #ffffff73,
+  3px 3px 5px rgba(94, 104, 121, 0.288); */
+}
+span:hover
+{
+  background: blueviolet;
+  font-size: 20px;
+  color: white;
+}
+span:active
+{
+  background: rgb(73, 73, 73);
+  color: white;
+}
+.igual
+{
+  grid-column: span 3;
+  width: 90%;
+  border-radius: 10px;
+  background: #7986cb;
+}
+.mais, .menos, .multi, .div
+{
+  background: #ededed;
+  border: 1px solid #7986cb;
+}
+.historico
+{
+  margin-left: 10px;
+  height: 330px;
+  border-left: 2px solid lightgray;
+}
+.historico h1
+{
+  margin-left: 10px;
+  font-size: 20px;
+}
+#historico
+{
+  list-style: none;
+  margin-left: 10px;
+}
+.historico ul li
+{
+  margin: 4px;
+  word-spacing: 2px;
+}

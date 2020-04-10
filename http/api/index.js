@@ -18,10 +18,10 @@ function writeFile(cb){
 
 
 http.createServer((req,res)=>{
-  console.log(URL.parse(req.url, true).query);
-    
   const { conta, id, del } = URL.parse(req.url, true).query //pegando os parametros na url e fazendo a descontrução
-  
+  res.writeHead(200,{
+    'Access-Control-Allow-Origin' : '*'
+  })
   //todas as contas
   if(!conta || !id )
     return res.end(JSON.stringify(dados))

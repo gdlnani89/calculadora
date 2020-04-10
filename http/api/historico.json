@@ -2,11 +2,15 @@
   "historicos": [
     {
       "id": "03",
-      "conta": "3vezes12"
+      "conta": "3x12"
     },
     {
       "id": "04",
-      "conta": "3mais2"
+      "conta": "3+2"
+    },
+    {
+      "id": "01",
+      "conta": "1x1"
     }
   ]
 }

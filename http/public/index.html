@@ -37,14 +37,23 @@
     let v = document.querySelector('.value');
     let i = document.querySelector('.igual');
     let historicoArray = [];
-    function listarHist(){
-      h.innerHTML = historicoArray.map((i) => `<li>${i}</li>`).join(''); 
+
+    async function load(array){
+      const lsApi = await fetch("http://localhost:3000")
+        .then(r => r.json())
+      array = lsApi.historicos;
+      return array
+    }
+    
+    function listarHist(array){
+      h.innerHTML = array.map((i) => `<li id="${i.id}">${i.conta}</li>`).join(''); 
     }
     function histFunction(){
       historicoArray.push(`${calc.txt.value}=${eval(calc.txt.value)}`)
       document.calc.txt.value = eval(calc.txt.value);
-      listarHist();
+      load();
     }
+    load();
   </script>
 </body>
 </html>
